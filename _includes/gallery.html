@@ -1,0 +1,11 @@
+{% assign gallery = site.data.chapters %}
+
+<div class="nat-image-grid">
+  {% for img in gallery reversed %}
+    <div class="block">
+        <a href="{{ site.baseurl }}/{{ img.cover }}">
+            <img style="width:200px;" src="{{ site.baseurl }}/{{ img.cover }}">
+        </a>
+    </div>
+  {% endfor %}
+</div>

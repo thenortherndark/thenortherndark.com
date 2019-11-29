@@ -1,0 +1,40 @@
+---
+layout: default
+carousel: art
+---
+<div class="text-container">
+<h1> {{ page.title }} </h1>
+
+	<div style="margin-left:auto; margin-right:0">
+         <div style="position: relative; top: 0; left: 0; float:right;padding: 0 15px;width:150px;">
+			<a href="{{ site.baseurl }}/{{ page.cover }}">
+				<img src="{{ site.baseurl }}/{{ page.cover }}" alt="profile" style="float:right;padding: 0 15px;width:150px;">
+			</a>
+                {% if page.comixology %}
+                <a href="{{ page.comixology }}">
+                    <img src="{{ site.baseurl }}/images/comixology.svg" alt="comixology" style="position: relative; fill:#FFFFFF;">
+                </a>
+                {% endif %}
+            </div>
+		<p align="right">
+		   {{ page.blurb }}
+		 </p>
+    
+
+
+		{% if page.images %}
+		<div class="flexslider" id="art-flexslider">
+			<ul class="slides">
+				{% for image in page.images %}
+					<li>
+						<a href="{{ site.baseurl }}/{{ image }}">
+							<img src="{{ site.baseurl }}/{{ image }}">
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% endif %}
+	</div>
+
+</div>

@@ -1,0 +1,81 @@
+# ----
+# Site
+
+title: The Northen Dark
+url: "https://www.thenorthendark.com"
+baseurl:
+google_analytics_key:
+google_maps_javascript_api_key:
+disqus_shortname:
+
+# Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
+logo: images/siteicon.png
+description: The Northen Dark
+author:
+  name: Dennis Gustafsson
+  email:
+  twitter: thenorthendark
+social:
+  name: The Northen Dark
+  links:
+    - https://www.comixology.com/the-northen-dark
+
+# -----
+# Build
+
+paginate: 10
+paginate_path: "/blog/:num/"
+permalink: pretty
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      _options:
+        content:
+          width: 1500
+          height: 2500
+
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "index.html"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "contact.html"
+    values:
+      full_width: true
+
+jekyll-archives:
+  enabled:
+    - categories
+
+plugins:
+  - jekyll-archives
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-paginate
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENCE
+
+# -----
+# Page Gen
+page_gen:
+  - data: 'chapters'
+    template: 'blurb'
+    name: 'title'
+    dir: 'books'

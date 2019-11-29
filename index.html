@@ -1,0 +1,18 @@
+---
+description: Read The Northern Dark
+carousel: books
+---
+
+<div class="text-container">	
+	<a href="{{ site.baseurl }}/books/{{ site.data.chapters[-1].title | strip | slugify: 'ascii' }}">
+		<img src="{{ site.baseurl }}{{ site.data.chapters[-1].cover }}" alt="latest">
+	</a>
+	
+	<p style="color:white;" align="center">
+		<i>"{{ site.data.chapters[-1].blurb }}"</i>
+	</p>
+</div>
+
+{% if site.data.chapters.size > 1 %}
+    {% include gallery.html %}
+{% endif %}
