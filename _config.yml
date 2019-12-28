@@ -31,17 +31,6 @@ defaults:
   -
     scope:
       path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      _options:
-        content:
-          width: 1500
-          height: 2500
-
-  -
-    scope:
-      path: ""
     values:
       layout: "page"
   -
@@ -49,12 +38,8 @@ defaults:
       path: "index.html"
     values:
       layout: "default"
-  -
-    scope:
-      path: "contact.html"
-    values:
-      full_width: true
 
+      
 jekyll-archives:
   enabled:
     - categories
@@ -70,8 +55,10 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - LICENCE
-
+  - ADD_CONTENT.md
+  - LICENSE.CC BY-NC-ND 3.0.md
+  - LICENSE.MIT.md
+  
 # -----
 # Page Gen
 page_gen:
