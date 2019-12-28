@@ -1,0 +1,19 @@
+language: ruby
+rvm:
+  - 2.6.5
+
+before_install: export AUTHOR_NAME="$(git log -1 $TRAVIS_COMMIT --pretty="%aN")"
+
+install: >
+  if  [[ ${AUTHOR_NAME} == "travis" ]]; then
+    exit 0;
+  else
+    bundle install;
+  fi;
+
+script: bundle exec rake site:deploy --quiet --trace
+
+env:
+  global:
+    secure: "gfzozi7K+mITenMLDFa6euFHRTnfO8jNnUws5sPYdIM6qteikqdT78xDtfjHbhCH9IeEtshnrfgD4zPzPVZRQHmBQPOg75EvojlFGpAlOJxY1MlLz2O1VDfuqLtXZUvU5xTm1yQN85RBpYYBIgy7xc8HJdoYa/fhcKA+/jHkGKyTxIFXOlW+MAlVcUL0FLVEtChhcVqn4tpei3gx/97k1vVb/2x0aomYWu1bVCV7lr10+z7eEgw1Lr65NKm7t1xtu0SwWzE6nB8pGBS2TQMJSA5VFs/BsrzLw8SmDsnpc/j7MPEy4SxlBp72ArNFfG7nBRW3xYHgT8poyvj5/cVh4inzkGBtKWhQGLkw6dFRo6aWIhSUzIPyCJWmRje+ACBrbHs0tOf3N0kUWdy0gXugoZv1e5EHeAi99h62ZqIy7L2mSsOsys9f8wSeIhInwMUXewFoN/yFzhpvOtUkJOVpPxVmrWtxginMWtdZ3NFQhnPCv04ck9Y+r9HAQDljqIkvxz+ItI4lOA0TEBGzw0FcL55wsBVXG3tptzgk2HI1vqex+sFQWizyONJxaPkIzaGgD96HXF30gZhTP6atJNfty0FT+BQvXSvaMhTkFqlVYS2+xVJg/RmhINiw6oaDk1RwKF6iLOQePQGv66t08ltwhHoxx5vucZoVAyL9+uC2fVk="
+

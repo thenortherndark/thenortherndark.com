@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "rake", "~> 13.0.1"
 gem 'jekyll', '4.0.0'
 
 group :jekyll_plugins do

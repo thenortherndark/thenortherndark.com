@@ -26,6 +26,8 @@ social:
 paginate: 10
 paginate_path: "/blog/:num/"
 permalink: pretty
+source: .
+destination: docs
 
 defaults:
   -
@@ -58,6 +60,10 @@ exclude:
   - ADD_CONTENT.md
   - LICENSE.CC BY-NC-ND 3.0.md
   - LICENSE.MIT.md
+  - Rakefile
+  - "*.Rmd"
+  - vendor
+  - .travis.yml
   
 # -----
 # Page Gen
@@ -66,3 +72,10 @@ page_gen:
     template: 'blurb'
     name: 'title'
     dir: 'books'
+    
+# -----
+# Travis
+username: thenortherndark
+repo: thenortherndark.github.io
+branch: master
+
