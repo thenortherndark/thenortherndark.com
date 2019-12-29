@@ -5,8 +5,8 @@ carousel: art
 <div class="text-container">
 <h1> {{ page.title }} </h1>
 
-	<div style="margin-left:auto; margin-left:0">
-         <div style="position: relative; top: 0; left: 0; float:left;padding: 0 15px 15px 0;width:150px;">
+	<div style="margin-left:auto; margin-left:0; overflow: auto;">
+         <div style="position: relative; top: 0; left: 0; float:left; padding: 0 15px 15px 0;width:150px;">
 			<a href="{{ site.baseurl }}/{{ page.cover }}">
 				<img src="{{ site.baseurl }}/{{ page.cover }}" alt="profile" style="float:left;padding: 0 15px;width:150px;">
 			</a>
@@ -19,22 +19,21 @@ carousel: art
 		<p align="left">
 		   {{ page.blurb }}
 		 </p>
-    
 
 
-		{% if page.images %}
-		<div class="flexslider" id="art-flexslider">
-			<ul class="slides">
-				{% for image in page.images %}
-					<li>
-						<a href="{{ site.baseurl }}/{{ image }}">
-							<img src="{{ site.baseurl }}/{{ image }}">
-						</a>
-					</li>
-				{% endfor %}
-			</ul>
-		</div>
-		{% endif %}
 	</div>
+	{% if page.images %}
+	<div class="flexslider" id="art-flexslider">
+		<ul class="slides">
+			{% for image in page.images %}
+				<li>
+					<a href="{{ site.baseurl }}/{{ image }}">
+						<img src="{{ site.baseurl }}/{{ image }}">
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	{% endif %}
 
 </div>

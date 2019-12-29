@@ -1,14 +1,12 @@
 # Lägga till ett kapitel
 
-I filen `_data/chapters.yml` lägg till an data som du vill ha. Denna filen används för att skapa både en sida om just detta kapitel. URL för den sidan kommer vara "hemsida.com/title-of-chapter" den kommer att fyllas ut med titel en `blurb` som beskriver kapitlet lite smått, du kan också lägga till bilder som ska vissas i ett bildspel sist på sidan.
+I filen `_data/chapters.yml`. Denna filen används för att skapa mycket på websidan.  
 
-Kapitlets bild läggs också till på första sidan i det bildspelet. Kapitlen läggs till det bildspelet i ordning, så lägg till den bilden du vill ha först i början (troligen det senaste kapitlet)
+"About the book": URL för den sidan kommer vara "thenortherndark.com/books/title-of-chapter" den kommer att fyllas ut med titel en `blurb` som beskriver kapitlet lite smått, du kan också lägga till bilder som ska vissas i ett bildspel sist på sidan. Det kommer också vissas en ifall det finns en comixology länk så läggs den till under bilden också.
 
-# Lägga till nytt citat
-
-På första sidan så finns det ett bildspel av citat, du kan lägga till fler av dessa genom att ändra i `_data/frontpage.yml`.
+"Hemsidan": På hemsidan används den genom att den tar den sista tillagda och använder den som stor bild för att visa det senast släppta.`blurb`läggs också till under denna bilden. Filen används också till att göra ett grid av alla chapters som har släppts under den stora bilden.
 
 
-# Lägga till fler bilder på framsidan
+# Ändra about
 
-Du lägger till bilder på framsidan genom att ändra i `_data/frontpage.yml` och under `- images` bilden som är längst upp visas längst up.
+Då about inte kommer ändas mycket så ligger det bara i `about.html` du kan alltid ändra bilderna genom att ersätta dem. Du kan ändra "about" texten genom att öppna `about.html` och ändra den där.
