@@ -18,7 +18,8 @@ author:
 social:
   name: The Northen Dark
   links:
-    - https://www.comixology.com/the-northen-dark
+    - https://www.instagram.com/thenortherndark/
+    - https://www.facebook.com/Thenortherndark-100268094801769/
 
 # -----
 # Build
@@ -64,7 +65,9 @@ exclude:
   - "*.Rmd"
   - vendor
   - .travis.yml
-  
+  - first-issue
+  - images/first-issue.pdf
+  - about
 # -----
 # Page Gen
 page_gen:

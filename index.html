@@ -1,20 +1,30 @@
 ---
-description: Read The Northern Dark
+title: Lovecraftian Nordic Noir Comic
+description: The Northern Dark graphic novels are a series of lovecraftian detective stories set in 1920'ies Sweden
 carousel: books
 ---
 
 <div class="text-container">
+
+</p>
     <div class="latest-chapter">
-        <a href="{{ site.baseurl }}/books/{{ site.data.chapters[-1].title | strip | slugify: 'ascii' }}">
-            <img src="{{ site.baseurl }}{{ site.data.chapters[-1].cover }}" alt="latest">
-        </a>
-    
-        <p style="color:white;" align="center">
-            <i>{{ site.data.chapters[-1].blurb }}</i>
-        </p>
-    </div>	
+        {% if site.data.chapters[-1].comixology %}
+            <a href="{{ site.data.chapters[-1].comixology }}">
+        {% else %}
+            <a href="{{ site.data.chapters[-1].cover }}.png">
+        {% endif %}
+                <img src="{{ site.baseurl }}{{ site.data.chapters[-1].cover }}_tiny.png" alt="latest" data-echo="{{ site.baseurl }}{{ site.data.chapters[-1].cover }}.png">
+            </a>
+        {% if site.data.chapters[-1].blurb %}
+            <p style="color:white;" align="center">
+                <i>{{ site.data.chapters[-1].blurb }}</i>
+            </p>
+        {% endif %}
+    </div>
 </div>
 
 {% if site.data.chapters.size > 1 %}
     {% include gallery.html %}
 {% endif %}
+
+{% include lazyload.html %}

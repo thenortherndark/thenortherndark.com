@@ -3,8 +3,12 @@
 <div class="nat-image-grid">
   {% for img in gallery reversed %}
     <div class="block">
-        <a href="{{ site.baseurl }}/{{ img.cover }}">
-            <img style="width:200px;" src="{{ site.baseurl }}/{{ img.cover }}">
+        {% if img.comixology %}
+            <a href="{{ site.baseurl }}/{{ img.comixology }}">
+        {% else %}
+            <a href="{{ {{ site.baseurl }}/{{ img.cover }}.png">
+        {% endif %}
+            <img src="{{ site.baseurl }}{{ img.cover }}_tiny.png" alt="latest" data-echo="{{ site.baseurl }}{{ img.cover }}.png">
         </a>
     </div>
   {% endfor %}
