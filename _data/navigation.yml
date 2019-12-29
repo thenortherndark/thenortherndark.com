@@ -1,7 +1,3 @@
-- name: First Issue
-  link: /first-issue
-  new_window: false
-  highlight: false
 - name: About
   link: /about/
   new_window: false
