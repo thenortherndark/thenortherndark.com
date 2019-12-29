@@ -23,12 +23,8 @@ social:
 
 # -----
 # Build
-
-paginate: 10
-paginate_path: "/blog/:num/"
 permalink: pretty
-source: .
-destination: docs
+
 
 defaults:
   -
@@ -75,10 +71,3 @@ page_gen:
     template: 'blurb'
     name: 'title'
     dir: 'books'
-    
-# -----
-# Travis
-username: thenortherndark
-repo: thenortherndark.github.io
-branch: master
-
