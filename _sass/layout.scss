@@ -6,6 +6,8 @@
 
 .text-container {
 	max-width: 750px;
+    color: white;
+    text-align: center;
 }
 
 .container {
@@ -17,6 +19,10 @@
 	}
 }
 
+.button-container {
+    padding: 40px 0 100px 0;
+}
+
 .content {
 	background: $brand-color;
 	padding: 1px 0 0 0;
@@ -24,8 +30,24 @@
 }
 
 .latest-chapter {
-	padding: 20px 10px;
+	padding: 20px 20px 20px 20px;
+    background: $secondary-brand-color;
 }
+
+.about {
+    position: relative;
+    width: 100vw;
+    background: $secondary-brand-color;
+    padding: 20px 20px 20px 20px;
+}
+
+.hero-image{
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+	width: auto;
+}
+
 
 section {
 	padding: 100px 0;

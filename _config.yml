@@ -1,7 +1,7 @@
 # ----
 # Site
 
-title: The Northen Dark
+title: Lovecraftian Nordic Noir Comic
 url: "https://www.thenorthendark.com"
 baseurl:
 google_analytics_key:
@@ -12,14 +12,16 @@ disqus_shortname:
 logo: images/siteicon.png
 description: The Northen Dark
 author:
-  name: Dennis Gustafsson
-  email:
-  twitter: thenorthendark
+  twitter: apartforlag
 social:
   name: The Northen Dark
   links:
     - https://www.instagram.com/thenortherndark/
     - https://www.facebook.com/Thenortherndark-100268094801769/
+twitter:
+  username: apartforlag
+  card: summary
+
 
 # -----
 # Build
@@ -32,13 +34,20 @@ defaults:
       path: ""
     values:
       layout: "page"
+      image:
+        path: /images/TND_delningsbild_1200x628.jpg
+        height: 628
+        width: 1200
   -
     scope:
       path: "index.html"
     values:
       layout: "default"
-
-      
+      image:
+        path: /images/TND_delningsbild_1200x628.jpg
+        height: 628
+        width: 1200
+        
 jekyll-archives:
   enabled:
     - categories
